@@ -7,6 +7,6 @@ fn main() {
         .expect("Should have been able to read the file");
 
     println!("With text:\n{contents}");
-    let mut seeds: Vec<i32> = vec![];
+    let _seeds: Vec<i32> = vec![];
     println!("Hello, world!");
 }
