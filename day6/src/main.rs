@@ -1,8 +1,8 @@
 fn main() {
     println!("Hello, world!");
-    let time: Vec<i32> = vec![53, 71, 78, 80];
-    let distance: Vec<i32> = vec![275,1181,1215,1524];
-    let mut solutions: Vec<i32> = vec![];
+    let time: Vec<i64> = vec![53717880];
+    let distance: Vec<i64> = vec![275118112151524];
+    let mut solutions: Vec<i64> = vec![];
     let mut i:usize = 0;
     while i<distance.len() {
         solutions.push(computesolutions(time[i], distance[i]));
@@ -11,7 +11,7 @@ fn main() {
     println!("{:?}",solutions);
 }
 
-fn computesolutions(time:i32, distance:i32) -> i32{
+fn computesolutions(time:i64, distance:i64) -> i64{
     let mut button = 0;
     let mut winnings = 0;
     while button <= time {
