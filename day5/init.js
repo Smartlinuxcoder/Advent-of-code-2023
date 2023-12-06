@@ -22,13 +22,8 @@ function findLowestLocation(seeds, seedToSoilMap, soilToFertilizerMap, fertilize
     currentNumber = convertNumber(currentNumber, humidityToLocationMap);
     locations.push(currentNumber);
   }
-  console.log(locations);
-  let lowestpos = currentNumber+1;
-  for (const position in locations) {
-    console.log(locations[position]);
-    if (locations[position]<lowestpos) lowestpos = position;
-  }
-  return locations[lowestpos];
+  console.log(Math.min(locations));
+  return locations.sort()[0];
 }
 
 function parseInput(input) {
