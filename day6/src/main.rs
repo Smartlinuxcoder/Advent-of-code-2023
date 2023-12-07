@@ -1,27 +1,20 @@
 fn main() {
-    println!("Hello, world!");
-    let time: Vec<i64> = vec![53717880];
-    let distance: Vec<i64> = vec![275118112151524];
-    let mut solutions: Vec<i64> = vec![];
-    let mut i:usize = 0;
-    while i<distance.len() {
-        solutions.push(computesolutions(time[i], distance[i]));
-        i=i+1
-    }
-    println!("{:?}",solutions);
+    let time = 53717880;
+    let distance = 275118112151524;
+    println!("{:?}", computesolutions(time, distance));
 }
 
-fn computesolutions(time:i64, distance:i64) -> i64{
+fn computesolutions(time: i64, distance: i64) -> i64 {
     let mut button = 0;
     let mut winnings = 0;
     while button <= time {
-        let mydistance = button*(time-button);
-/*         println!("{}", mydistance); */
-        button = button+1;
+        let mydistance = button * (time - button);
+    button = button + 1;    
         if mydistance > distance {
-            winnings = winnings+1;
+            winnings = winnings + 1;
+        } else if winnings < 0 {
+            break;
         }
     }
     winnings
-
 }
